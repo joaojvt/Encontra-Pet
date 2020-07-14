@@ -1,28 +1,36 @@
 package br.com.encontra.pet.api.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "PET")
 public class Pet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @Column
+    @NotNull
     private String name;
+    @NotNull
     private String race;
+    @NotNull
     private String whatsapp;
+    @NotNull
     private String city;
+    @NotNull
     private String state;
+    @NotNull
     private Double longitude;
+    @NotNull
     private Double latitude;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
