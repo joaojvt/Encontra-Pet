@@ -8,13 +8,15 @@ import javax.validation.constraints.NotNull;
 public class Pet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column
     @NotNull
     private String name;
     @NotNull
     private String race;
+    @NotNull
+    private String gender;
     @NotNull
     private String whatsapp;
     @NotNull
@@ -25,12 +27,11 @@ public class Pet {
     private Double longitude;
     @NotNull
     private Double latitude;
-
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -48,6 +49,14 @@ public class Pet {
 
     public void setRace(String race) {
         this.race = race;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getWhatsapp() {

@@ -24,7 +24,7 @@ public class PetController {
         return petRepository.findAll();
     }
 
-    @GetMapping("/pet/{id}")
+    @GetMapping("/pets/{id}")
     public ResponseEntity<Pet> getPetById(@PathVariable(value = "id") Integer petId)
        throws RelationTypeNotFoundException{
         Pet product = petRepository.findById(petId)
@@ -48,13 +48,13 @@ public class PetController {
         pet.setCity(pet.getCity());
         pet.setState(pet.getState());
         pet.setLongitude(pet.getLongitude());
-        pet.setLongitude(pet.getLatitude());
+        pet.setLatitude(pet.getLatitude());
         final Pet updatedProduct = petRepository.save(pet);
 
         return ResponseEntity.ok(updatedProduct);
     }
 
-    @DeleteMapping("/pet/{id}")
+    @DeleteMapping("/pets/{id}")
     public Map<String, Boolean> deleteProduct(@PathVariable(value = "id") Integer petId) throws Exception {
         Pet pet = petRepository.findById(petId)
                 .orElseThrow(() -> new RelationTypeNotFoundException("Product not found on :: " + petId));
