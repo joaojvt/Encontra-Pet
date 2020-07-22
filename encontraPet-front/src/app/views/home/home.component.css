@@ -1,0 +1,44 @@
+.home-background {
+    height: 100vh;
+    background: linear-gradient(90deg, #e69e4c 40%, #bcc1d1 40%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    font-family: Oswald;
+    width: 600px;
+    margin-top: 100px;
+}
+
+.card mat-card-title {
+    font-size: 3em;
+    line-height: 2em;
+}
+
+.card mat-card-content {
+    font-size: 1.4em;
+    line-height: 1.4em;
+}
+
+button {
+    background-color: #34CB79;
+    color: #fff;
+    font-family: Oswald;
+    font-size: 2.2rem;
+    padding: 0 18px 0 0;
+}
+
+button .arrow-button {
+    display: inline-block;
+    background-color: #2FB86E;
+    line-height: initial;
+    width: 52px;
+}
+
+button .arrow-button i {
+    transform: rotate(-90deg);
+    font-size: 2.1rem;
+    line-height: 2em;
+}
