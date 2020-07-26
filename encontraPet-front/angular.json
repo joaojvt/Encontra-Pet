@@ -107,5 +107,8 @@
       }
     }
   },
-  "defaultProject": "encontraPet-front"
+  "defaultProject": "encontraPet-front",
+  "cli": {
+    "analytics": "9c299586-a831-4763-8036-00172b694b71"
+  }
 }

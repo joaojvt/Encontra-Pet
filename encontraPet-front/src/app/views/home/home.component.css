@@ -23,7 +23,7 @@
 }
 
 button {
-    background-color: #34CB79;
+    background-color: #a03b34;
     color: #fff;
     font-family: Oswald;
     font-size: 2.2rem;
@@ -32,7 +32,7 @@ button {
 
 button .arrow-button {
     display: inline-block;
-    background-color: #2FB86E;
+    background-color: #88342e;
     line-height: initial;
     width: 52px;
 }
