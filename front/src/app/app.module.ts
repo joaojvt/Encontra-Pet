@@ -16,13 +16,14 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { PetListComponent } from './components/pet/pet-list/pet-list.component';
 import { MapComponent } from './components/pet/map/map.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
     PetListComponent,
-    MapComponent
+    MapComponent,
   ],
   imports: [
     BrowserModule,

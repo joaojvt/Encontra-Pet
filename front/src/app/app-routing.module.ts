@@ -4,9 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 
 
+
 const routes: Routes = [
   { path: '',  component: HomeComponent},
   { path: 'pets/:uf/:city',  component: PetListComponent}
+  // { path: 'pets/:id',  component: PetDetailsComponent}
 ];
 
 @NgModule({

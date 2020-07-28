@@ -1,4 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { MapService } from './map.service';
 import * as Leaf from 'leaflet';
 
 @Component({
@@ -8,27 +9,25 @@ import * as Leaf from 'leaflet';
 })
 export class MapComponent implements AfterViewInit {
 
-  private map: any;
+  constructor(private mapService: MapService) { }
 
-  constructor() { }
+  private map:any;
 
-  ngAfterViewInit(): void {
-    this.initMap()
+  async ngAfterViewInit(): Promise<any> {
+    this.map = await this.mapService.initMap()
+    this.initPoints();
   }
 
-  private initMap(): void {
-    this.map = Leaf.map('map', {
-      center: [-25.5614771, -49.3938948],
-      zoom: 15
+  initPoints(): void {
+    const myIcon = Leaf.icon({
+      iconUrl: './../../../assets/image/pets-icons.svg',
+      className: 'pet-point',
+
     })
-    const tiles = Leaf.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    });
 
-    tiles.addTo(this.map)
+    const marker = Leaf.marker([-25.5680148, -49.3912029], { icon: myIcon, interactive: true, })
+
+    marker.addTo(this.map)
   }
-
-  
 
 }

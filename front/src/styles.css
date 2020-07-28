@@ -30,3 +30,10 @@ a {
     background-color: #fff;
     color: #000;
 }
+
+.pet-point {
+    border: #525252 1px solid;
+    height: 40px;
+    border-radius: 5px;
+    background-color: honeydew;
+}
